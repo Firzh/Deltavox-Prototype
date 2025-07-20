@@ -45,31 +45,31 @@
             <div class="space-y-6">
                 <div class="animate-fade-in-down animation-delay-0 hidden-on-load"> {{-- Tambahkan hidden-on-load --}}
                     {{-- "WE ARE DELTA VOX" --}}
-                    <h2 class="text-white custom-font-bebas-neue text-[50px] md:text-[80px] lg:text-[119.11px] font-normal leading-none">
+                    <h2 class="text-white custom-font-bebas-neue text-[50px] md:text-[80px] lg:text-[119.11px] font-normal leading-none -ml-20">
                         <span class="block">WE ARE</span>
                         <span class="block">DELTA VOX</span>
                     </h2>
                     {{-- "Energy-Efficient Car Research Team" --}}
-                    <h3 class="text-white custom-font-poppins-bold text-[20px] md:text-[25px] lg:text-[29.43px] font-bold leading-normal mb-8">
+                    <h3 class="text-white custom-font-poppins-bold text-[20px] md:text-[25px] lg:text-[29.43px] font-bold leading-normal mb-8 -ml-20">
                         Energy-Efficient Car Research Team
                     </h3>
                 </div>
                 
                 <div class="prose prose-lg text-white space-y-4 animate-fade-in-down animation-delay-300 hidden-on-load"> {{-- Tambahkan hidden-on-load --}}
                     {{-- Paragraf pertama --}}
-                    <p class="custom-font-poppins-regular text-[16px] md:text-[18.48px] leading-relaxed">
+                    <p class="custom-font-poppins-regular text-[16px] md:text-[18.48px] leading-relaxed -ml-20">
                         We are currently developing innovative energy-efficient vehicles to drive a sustainable future.
                     </p>
                     
                     {{-- Paragraf kedua --}}
-                    <p class="custom-font-poppins-regular text-[16px] md:text-[18.48px] leading-relaxed">
+                    <p class="custom-font-poppins-regular text-[16px] md:text-[18.48px] leading-relaxed -ml-20 ">
                         Our mission is to design and build cutting-edge mobility solutions, not just to compete, but to make a real impact.
                     </p>
                 </div>
 
                 <div class="pt-4 animate-fade-in-down animation-delay-600 hidden-on-load"> {{-- Tambahkan hidden-on-load --}}
                     <a href="{{ route('about') }}" 
-                       class="bg-[#FF5733] text-white custom-font-sans-serif md:text-[20.48px] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#E04422] transition duration-300 transform hover:scale-105 shadow-lg inline-flex items-center">
+                       class="bg-[#FF5733] text-white custom-font-sans-serif md:text-[20.48px] -ml-20 px-8 py-4 rounded-full font-bold text-lg hover:bg-[#E04422] transition duration-300 transform hover:scale-105 shadow-lg inline-flex items-center">
                         More About Us
                         <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -79,7 +79,7 @@
             </div>
 
             {{-- image section --}}
-            <div class="relative flex justify-center items-center h-full animate-fade-in-right animation-delay-300 hidden-on-load"> {{-- Tambahkan hidden-on-load --}}
+            <div class="relative flex justify-center items-center h-full animate-fade-in-right animation-delay-300 hidden-on-load ml-20 -mr-10"> {{-- Tambahkan hidden-on-load --}}
                 {{-- Ini adalah div frame gambar utama --}}
                 {{-- Pastikan ini yang menjadi parent relative untuk elips --}}
                 <div class="custom-image-frame w-[450px] h-[500px] rounded-[30px] overflow-hidden shadow-2xl -mt-10 ml-15 z-20 relative">
@@ -97,24 +97,39 @@
 </section>
 
 {{-- Achivement Section --}}
-<section class="py-20 bg-gradient-to-r from-deep-blue to-electric-blue">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold text-black mb-6">
-            Siap Bergabung dengan Revolusi Mobil Listrik?
-        </h2>
-        <p class="text-xl text-gray-700 mb-8 leading-relaxed">
-            Bergabunglah dengan komunitas kami dan jadilah bagian dari perubahan menuju 
-            transportasi yang lebih berkelanjutan dan ramah lingkungan.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="{{ route('contact.index') }}" 
-               class="bg-gray-200 text-deep-blue px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-400 transition duration-300 transform hover:scale-105 shadow-lg">
-                Hubungi Kami
-            </a>
-            <a href="{{ route('projects.index') }}" 
-               class="border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-deep-blue transition duration-300 transform hover:scale-105">
-                Lihat Proyek
-            </a>
+<section class="py-50 bg-[#120E0E] overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            {{-- Left Column: OUR ACHIEVEMENT --}}
+            <div class="text-left animate-fade-in-left hidden-on-load animation-delay-0"> {{-- Tambahkan animasi fade-in-left --}}
+                <h2 class="text-7xl md:text-8xl lg:text-[119.11px] custom-font-bebas-neue-1 font-bold text-white leading-none tracking-tight -ml-20">
+                    OUR <br> ACHIEVEMENT
+                </h2>
+            </div>
+
+            {{-- Right Column: Award Details --}}
+            <div class="text-left animate-fade-in-right hidden-on-load animation-delay-300"> {{-- Tambahkan animasi fade-in-right --}}
+                <h3 class="text-xl md:text-4xl custom-font-bebas-neue-1 font-bold text-white mb-4">
+                    THE BEST NEWCOMER TEAM AWARD KMHE - 2022
+                </h3>
+                <p class="text-base text-gray-300 custom-font-poppins-regular leading-relaxed -mr-20">
+                    Delta Vox, the energy-efficient vehicle team from UPN "Veteran" East Java, made an impressive debut at the 2022 Indonesia Energy-Saving Car Competition (KMHE) by winning the Best Newcomer Team Award. With their first-ever energy-efficient car, Kalimasada
+                </p>
+            </div>
+        </div>
+
+        {{-- Image of the car below the text --}}
+        <div class="mt-16 flex justify-center animate-fade-in-up hidden-on-load animation-delay-600"> {{-- Tambahkan animasi fade-in-up (dari bawah) --}}
+            <div class="relative custom-image-achievement-wrapper overflow-hidden rounded-xl shadow-lg">
+                <img src="{{ asset('images/car-achievement.png') }}" alt="Deltavox Car Achievement" class="w-full h-full object-cover">
+
+                {{-- Overlay Gradien dan Teks saat Hover --}}
+                <div class="absolute inset-0 bg-transparent flex items-end justify-end p-8 opacity-0 transition-opacity duration-300 ease-in-out custom-overlay">
+                    <div class="text-white md:text-8xl mb-12 custom-font-bebas-neue-1 font-bold uppercase transition-transform duration-300 ease-in-out transform translate-y-full custom-overlay-text">
+                        SEE THE NEWS
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -122,6 +137,21 @@
 <style>
 
 /* Custom Styles for Animations */
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fade-in-up 1s ease-out forwards;
+}
+
 @keyframes fade-in-down {
     from {
         opacity: 0;
@@ -135,25 +165,6 @@
 
 .animate-fade-in-down {
     animation: fade-in-down 1s ease-out forwards;
-}
-
-@keyframes fade-in-up {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.animate-fade-in-down {
-    animation: fade-in-down 1s ease-out forwards;
-}
-
-.animate-fade-in-up {
-    animation: fade-in-up 1s ease-out forwards;
 }
 
 .animation-delay-300 {
@@ -192,28 +203,36 @@
     animation: fade-in-right 1s ease-out forwards;
 }
 
-/* Hapus opacity: 0 dari sini */
+@keyframes fade-in-left {
+    from {
+        opacity: 0;
+        transform: translateX(-50px); /* Mulai dari sedikit di kiri */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-fade-in-left {
+    animation: fade-in-left 1s ease-out forwards;
+}
+
+/* Pastikan hidden-on-load dan animation-delay kelas digunakan dengan benar */
+.hidden-on-load {
+    opacity: 0;
+}
+
 .animation-delay-0 {
     animation-delay: 0s;
-    /* opacity: 0; <--- HAPUS BARIS INI */
 }
 
 .animation-delay-300 {
     animation-delay: 0.3s;
-    /* opacity: 0; <--- HAPUS BARIS INI */
 }
 
 .animation-delay-600 {
     animation-delay: 0.6s;
-    /* opacity: 0; <--- HAPUS BARIS INI */
-}
-
-/* Tambahkan kelas ini untuk menyembunyikan elemen sebelum animasi dimulai */
-.hidden-on-load {
-    opacity: 0;
-    /* Jika Anda ingin juga menyembunyikan pergeseran awal sebelum animasi, tambahkan: */
-    /* transform: translateY(-30px); atau translateX(50px); sesuai animasinya */
-    /* Namun, Intersection Observer akan langsung menerapkan kelas animasi yang sudah memiliki transform */
 }
 
 /* Custom Image Frame */
@@ -264,39 +283,6 @@
     transform: translateX(50px); /* Untuk elemen yang fade-in dari kanan */
 }
 
-
-/* Definisi animasi actual (saat kelas .animate ditambahkan) */
-.animate-fade-in {
-    animation: fade-in-up 1s ease-out forwards; /* Menggunakan animasi up secara default untuk semua fade-in */
-}
-
-.animate-fade-in-right {
-    animation: fade-in-right 1s ease-out forwards;
-}
-
-/* Definisi keyframes */
-@keyframes fade-in-up {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fade-in-right {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
 /* Custom CSS untuk gradien background */
 .custom-gradient-bg {
     background: linear-gradient(to top,
@@ -320,6 +306,44 @@
     margin-bottom: -30px;
     text-align: left; 
     padding-left: 430px;
+}
+
+/* Achievement Image Hover Effect */
+.custom-image-achievement-wrapper {
+    width: 1400px; /* Lebar frame gambar */
+    height: 600px; /* Tinggi frame gambar */
+    position: relative; /* Penting untuk absolute positioning overlay */
+    cursor: pointer; /* Menunjukkan ini bisa diinteraksikan */
+}
+
+/* Overlay yang akan muncul saat hover */
+.custom-overlay {
+    background: linear-gradient(to top, 
+        #120E0E 0%, /* Warna gelap di bagian bawah */
+        transparent 100% /* Transparan di bagian atas */
+    );
+    height: 50%; /* 1/2 dari tinggi gambar */
+    top: auto; /* Untuk menempatkan gradien di bagian bawah */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0; /* Sembunyikan secara default */
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Teks di dalam overlay */
+.custom-overlay-text {
+    transform: translateY(100%); /* Sembunyikan teks di luar view */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover state */
+.custom-image-achievement-wrapper:hover .custom-overlay {
+    opacity: 1; /* Tampilkan overlay saat hover */
+}
+
+.custom-image-achievement-wrapper:hover .custom-overlay-text {
+    transform: translateY(0); /* Geser teks ke posisi terlihat saat hover */
 }
 
 /* Custom fonts */
@@ -351,9 +375,16 @@
     font-style: normal;
     font-display: swap; /* Memperbaiki performa loading font */
 }
+
 .custom-font-bebas-neue {
     font-family: 'Bebas Neue', sans-serif;
     font-weight: 700;
+}
+
+.custom-font-bebas-neue-1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.025em;
 }
 
 @font-face {
