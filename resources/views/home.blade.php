@@ -79,17 +79,34 @@
             </div>
 
             {{-- image section --}}
-            <div class="relative flex justify-center items-center h-full animate-fade-in-right animation-delay-300 hidden-on-load ml-20 -mr-10"> {{-- Tambahkan hidden-on-load --}}
+            <div class="relative flex justify-center items-center h-full animate-fade-in-right animation-delay-300 hidden-on-load ml-20 -mr-10">
                 {{-- Ini adalah div frame gambar utama --}}
-                {{-- Pastikan ini yang menjadi parent relative untuk elips --}}
                 <div class="custom-image-frame w-[450px] h-[500px] rounded-[30px] overflow-hidden shadow-2xl -mt-10 ml-15 z-20 relative">
-                    <img src="{{ asset('images/blank.png') }}" alt="Team Working" class="w-full h-full object-cover">
+                    {{-- Ganti img src="images/blank.png" dengan kode carousel --}}
+                    <div class="carousel-container-about-section"> {{-- Wrapper baru untuk carousel, akan di-style untuk mengisi custom-image-frame --}}
+                        <div class="carousel-slide-about-section">
+                            <img src="{{ asset('images/photo1.png') }}" alt="Photo 1">
+                            <img src="{{ asset('images/photo2.png') }}" alt="Photo 2">
+                            <img src="{{ asset('images/photo3.png') }}" alt="Photo 3">
+                            <img src="{{ asset('images/photo4.png') }}" alt="Photo 4"> {{-- Pastikan nama file cocok --}}
+                        </div>
+
+                        <button class="carousel-btn-about-section prev" aria-label="Previous Slide">&#10094;</button>
+                        <button class="carousel-btn-about-section next" aria-label="Next Slide">&#10095;</button>
+
+                        <div class="carousel-dots-about-section">
+                            <span class="dot-about-section active" data-slide-index="0"></span>
+                            <span class="dot-about-section" data-slide-index="1"></span>
+                            <span class="dot-about-section" data-slide-index="2"></span>
+                            <span class="dot-about-section" data-slide-index="3"></span> {{-- Tambahkan dot untuk photo4.png --}}
+                        </div>
+                    </div>
 
                     {{-- Gambar Elips Kiri (sekarang relatif terhadap custom-image-frame) --}}
                     <img src="{{ asset('images/Ellipse-left.png') }}" alt="Left Ellipse Frame" class="absolute z-10 custom-ellipse-left mt-5">
-                    
+
                     {{-- Gambar Elips Kanan (sekarang relatif terhadap custom-image-frame) --}}
-                    <img src="{{ asset('images/Ellipse-right.png') }}" alt="Right Ellipse Frame" class="absolute z-10 custom-ellipse-right mt-55">
+                    <img src="{{ asset('images/Ellipse-right.png') }}" alt="Right Ellipse Frame" class="absolute z-10 custom-ellipse-right mt-55"> {{-- Hapus mt-55 --}}
                 </div>
             </div>
         </div>
@@ -412,6 +429,214 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 400; /* Regular */
 }
+
+/* carousel css */
+/* ... (kode CSS lainnya) ... */
+
+/* Carousel Styles for About Section */
+.carousel-container-about-section {
+    position: relative;
+    width: 100%; /* Agar mengisi custom-image-frame */
+    height: 100%; /* Agar mengisi custom-image-frame */
+    overflow: hidden;
+    /* border-radius: inherit; */ /* Warisi border-radius dari parent custom-image-frame */
+    /* box-shadow: inherit; */ /* Warisi shadow dari parent custom-image-frame */
+    /* Pastikan border-radius dan shadow sudah di custom-image-frame */
+}
+
+.carousel-slide-about-section {
+    display: flex;
+    width: 100%;
+    transition: transform 1.6s ease-in-out;
+    height: 100%; /* Pastikan slide mengisi tinggi container */
+}
+
+.carousel-slide-about-section img {
+    width: 100%;
+    flex-shrink: 0;
+    display: block;
+    height: 100%; /* Agar gambar mengisi tinggi slide */
+    object-fit: cover;
+}
+
+.carousel-btn-about-section {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    z-index: 30; /* Tinggikan z-index agar di atas elips */
+    transition: background-color 0.3s ease;
+}
+
+.carousel-btn-about-section:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-btn-about-section.prev {
+    left: 10px;
+}
+
+.carousel-btn-about-section.next {
+    right: 10px;
+}
+
+.carousel-dots-about-section {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 30; /* Tinggikan z-index agar di atas elips */
+}
+
+.dot-about-section {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot-about-section.active {
+    background-color: white;
+}
+
 </style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    // KODE JAVASCRIPT LAMA UNTUK ANIMASI FADE-IN SAAT SCROLL DI SINI...
+    const animatedElements = document.querySelectorAll('.animate-fade-in-down, .animate-fade-in-right, .animate-fade-in-up');
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observerCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.remove('hidden-on-load');
+                observer.unobserve(entry.target);
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    animatedElements.forEach(element => {
+        if (!element.classList.contains('hidden-on-load')) {
+            element.classList.add('hidden-on-load');
+        }
+        observer.observe(element);
+    });
+
+    // KODE JAVASCRIPT BARU UNTUK CAROUSEL DIMULAI DI SINI
+    const carouselSlideAbout = document.querySelector('.carousel-slide-about-section');
+    const carouselImagesAbout = document.querySelectorAll('.carousel-slide-about-section img');
+    const prevBtnAbout = document.querySelector('.carousel-btn-about-section.prev');
+    const nextBtnAbout = document.querySelector('.carousel-btn-about-section.next');
+    const dotsContainerAbout = document.querySelector('.carousel-dots-about-section');
+    const dotsAbout = document.querySelectorAll('.dot-about-section');
+
+    let counterAbout = 0;
+    // Pastikan size dihitung setelah gambar dimuat atau pada resize
+    let sizeAbout = carouselImagesAbout[0] ? carouselImagesAbout[0].clientWidth : 0; 
+
+    // Set posisi awal carousel
+    if (carouselSlideAbout && sizeAbout > 0) {
+        carouselSlideAbout.style.transform = 'translateX(' + (-sizeAbout * counterAbout) + 'px)';
+    }
+
+    // Fungsi untuk memperbarui indikator titik
+    function updateDotsAbout() {
+        dotsAbout.forEach(dot => dot.classList.remove('active'));
+        if (dotsAbout[counterAbout]) { // Tambahkan pengecekan null/undefined
+            dotsAbout[counterAbout].classList.add('active');
+        }
+    }
+
+    // Fungsi untuk menggeser slide ke depan
+    function nextSlideAbout() {
+        if (counterAbout >= carouselImagesAbout.length - 1) {
+            counterAbout = 0;
+        } else {
+            counterAbout++;
+        }
+        carouselSlideAbout.style.transform = 'translateX(' + (-sizeAbout * counterAbout) + 'px)';
+        updateDotsAbout();
+    }
+
+    // Fungsi untuk menggeser slide ke belakang
+    function prevSlideAbout() {
+        if (counterAbout <= 0) {
+            counterAbout = carouselImagesAbout.length - 1;
+        } else {
+            counterAbout--;
+        }
+        carouselSlideAbout.style.transform = 'translateX(' + (-sizeAbout * counterAbout) + 'px)';
+        updateDotsAbout();
+    }
+
+    // Tombol Next
+    if (nextBtnAbout) { // Pastikan tombol ada sebelum menambahkan event listener
+        nextBtnAbout.addEventListener('click', () => {
+            nextSlideAbout();
+            resetAutoSlideAbout();
+        });
+    }
+
+    // Tombol Previous
+    if (prevBtnAbout) { // Pastikan tombol ada sebelum menambahkan event listener
+        prevBtnAbout.addEventListener('click', () => {
+            prevSlideAbout();
+            resetAutoSlideAbout();
+        });
+    }
+
+    // Navigasi dengan titik
+    if (dotsContainerAbout) { // Pastikan container dots ada
+        dotsContainerAbout.addEventListener('click', (e) => {
+            if (e.target.classList.contains('dot-about-section')) {
+                const slideIndex = parseInt(e.target.dataset.slideIndex);
+                counterAbout = slideIndex;
+                carouselSlideAbout.style.transform = 'translateX(' + (-sizeAbout * counterAbout) + 'px)';
+                updateDotsAbout();
+                resetAutoSlideAbout();
+            }
+        });
+    }
+
+    const autoSlideIntervalAbout = 3000;
+    let slideIntervalAbout = setInterval(nextSlideAbout, autoSlideIntervalAbout);
+
+    function resetAutoSlideAbout() {
+        clearInterval(slideIntervalAbout);
+        slideIntervalAbout = setInterval(nextSlideAbout, autoSlideIntervalAbout);
+    }
+
+    // Opsional: Respon terhadap perubahan ukuran window (untuk update ukuran slide)
+    window.addEventListener('resize', () => {
+        if (carouselImagesAbout[0]) { // Pastikan ada gambar sebelum mengakses clientWidth
+            sizeAbout = carouselImagesAbout[0].clientWidth;
+            if (carouselSlideAbout) {
+                 carouselSlideAbout.style.transform = 'translateX(' + (-sizeAbout * counterAbout) + 'px)';
+            }
+        }
+    });
+
+    // Panggil updateDotsAbout() saat inisialisasi untuk memastikan titik aktif diatur dengan benar
+    updateDotsAbout();
+});
+</script>
 
 @endsection
