@@ -1,0 +1,47 @@
+@import 'tailwindcss';
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@import './footer.css';
+
+@font-face {
+    font-family: 'Anton'; /* Define the font family name */
+    src: url('../fonts/Anton-Regular.ttf') format('truetype'); /* Path to the font file relative to public/css */
+    font-weight: 400; /* Anton typically has only one weight (Regular) */
+    font-style: normal; /* Anton typically has only normal style */
+    font-display: swap; /* Improves performance by showing fallback text while font loads */
+}
+
+@font-face {
+    font-family: 'Bebas Neue'; /* Nama untuk font ini */
+    src: url('../fonts/BebasNeue-Regular.ttf') format('truetype'); /* Sesuaikan path dan nama file */
+    /* Jika memiliki format WOFF2/WOFF, tambahkan juga untuk performa yang lebih baik: */
+    /*
+    src: url('../fonts/BebasNeue-Regular.woff2') format('woff2'),
+         url('../fonts/BebasNeue-Regular.woff') format('woff'),
+         url('../fonts/BebasNeue-Regular.ttf') format('truetype');
+    */
+    font-weight: normal; /* Bebas Neue biasanya hanya memiliki satu ketebalan */
+    font-style: normal;
+    font-display: swap; /* Memperbaiki performa loading font */
+}
+
+@font-face {
+    font-family: 'Poppins'; /* Nama font family */
+    src: url('../fonts/poppins/Poppins-Regular.ttf') format('truetype'); /* Path ke file Poppins Regular */
+    /* Tambahkan format WOFF2/WOFF jika tersedia */
+    font-weight: 400; /* Ketebalan untuk Regular */
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins'; /* Nama font family yang sama */
+    src: url('../fonts/poppins/Poppins-Bold.ttf') format('truetype'); /* Path ke file Poppins Bold */
+    /* Tambahkan format WOFF2/WOFF jika tersedia */
+    font-weight: 700; /* Ketebalan untuk Bold */
+    font-style: normal;
+    font-display: swap;
+}
