@@ -6,7 +6,9 @@
 @section('description', 'Deltavox adalah komunitas mahasiswa yang berdedikasi mengembangkan teknologi mobil listrik dan menciptakan masa depan transportasi berkelanjutan.')
 
 @section('content')
-<section class="relative bg-white min-h-screen flex items-center overflow-hidden custom-bg-banner"> {{-- Ubah background dari section, tambahkan overflow-hidden --}}
+<section class="relative bg-white h-[70vh] md:h-[90vh] lg:h-[100vh] xl:h-[100vh] 2xl:h-[100vh] flex items-center overflow-hidden custom-bg-banner">
+    
+    {{-- Ubah background dari section, tambahkan overflow-hidden --}}
     {{-- Background utama section yang lebih besar --}}
     {{-- Kelas bg-deep-blue akan menjadi warna utama di bagian atas jika gradien tidak menutupi --}}
 
@@ -17,20 +19,23 @@
     {{-- 'bottom-0 left-0' untuk menempatkan di bagian bawah --}}
     {{-- 'custom-gradient-bg' adalah kelas CSS kustom untuk gradien --}}
 
-    <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-[600px] w-[900px] md:h-[700px] md:w-[1050px] lg:h-[750px] lg:w-[1125px] xl:h-[800px] xl:w-[1200px] 2xl:h-[850px] 2xl:w-[1275px] car-image-container z-10">
+    <div class="absolute bottom-0 left-1/2 animate-fade-in-right-1 animation-delay-200 transform -translate-x-1/2 car-image-container z-10
+    h-[400px] w-[700px] 
+    md:h-[700px] md:w-[1050px] 
+    lg:h-[850px] lg:w-[1275px] ">
         <img src="{{ asset('images/car-home.png') }}" alt="Mobil Listrik Deltavox" class="absolute bottom-0 left-0 w-full h-auto object-contain">
     </div>
 
     {{-- Banner Section --}}
-    <div class="relative z-0 mb-auto mt-30 text-center w-full px-4 sm:px-6 lg:px-8"> {{-- Ubah z-30 menjadi z-0 atau z-lowest --}}
-        <div class="space-y-10"> {{-- Mengurangi space-y karena ukuran font besar --}}
+    <div class="relative z-0 mb-48 sm:mb-50 md:mb-96 lg:mb-120 mt-30 text-center w-full px-4 sm:px-6 lg:px-8"> {{-- Ubah z-30 menjadi z-0 atau z-lowest --}}
+        <div class="space-y-10 "> {{-- Mengurangi space-y karena ukuran font besar --}}
             <div class="animate-fade-in-down animation-delay-0">
-                <p class="text-black custom-font-sans-serif text-2xl md:text-[28.03px] lg:text-[28.03px] font-normal leading-normal tracking-normal mb-2 custom-placement-flow">
+                <p class="text-black custom-font-sans-serif text-xl md:text-[28.03px] lg:text-[28.03px] font-normal leading-normal tracking-normal -mb-8 -ml-20 md:-ml-68 lg:-ml-105">
                     When focus goes energy flows
                 </p>
             </div>
             <div class="animate-fade-in-down animation-delay-300">
-                <h1 class="text-black custom-font-anton text-[120px] md:text-[180px] lg:text-[203.96px] font-normal leading-none tracking-tighter custom-letter-spacing">
+                <h1 class="text-black custom-font-anton text-[90px] md:text-[166px] lg:text-[203.96px] font-normal leading-none tracking-tighter custom-letter-spacing">
                     DELTA VOX
                 </h1>
             </div>
@@ -43,33 +48,35 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div class="space-y-6">
-                <div class="animate-fade-in-down animation-delay-0 hidden-on-load"> {{-- Tambahkan hidden-on-load --}}
+                <div class="animate-fade-in-down-1 animation-delay-300 hidden-on-load"> {{-- Tambahkan hidden-on-load --}}
+
                     {{-- "WE ARE DELTA VOX" --}}
-                    <h2 class="text-white custom-font-bebas-neue text-[50px] md:text-[80px] lg:text-[119.11px] font-normal leading-none -ml-20">
+                    <h2 class="text-white custom-font-bebas-neue text-[50px] md:text-[80px] lg:text-[119.11px] font-normal leading-none">
                         <span class="block">WE ARE</span>
                         <span class="block">DELTA VOX</span>
                     </h2>
+
                     {{-- "Energy-Efficient Car Research Team" --}}
-                    <h3 class="text-white custom-font-poppins-bold text-[20px] md:text-[25px] lg:text-[29.43px] font-bold leading-normal mb-8 -ml-20">
+                    <h3 class="text-white custom-font-poppins-bold animate-fade-in-up animation-delay-300 text-[20px] md:text-[25px] lg:text-[29.43px] font-bold leading-normal mb-8 ">
                         Energy-Efficient Car Research Team
                     </h3>
                 </div>
                 
-                <div class="prose prose-lg text-white space-y-4 animate-fade-in-down animation-delay-300 hidden-on-load"> {{-- Tambahkan hidden-on-load --}}
+                <div class="prose prose-lg text-white space-y-4 animate-fade-in-up animation-delay-300 hidden-on-load"> {{-- Tambahkan hidden-on-load --}}
                     {{-- Paragraf pertama --}}
-                    <p class="custom-font-poppins-regular text-[16px] md:text-[18.48px] leading-relaxed -ml-20">
+                    <p class="custom-font-poppins-regular text-[16px] md:text-[18.48px] leading-relaxed ">
                         We are currently developing innovative energy-efficient vehicles to drive a sustainable future.
                     </p>
                     
                     {{-- Paragraf kedua --}}
-                    <p class="custom-font-poppins-regular text-[16px] md:text-[18.48px] leading-relaxed -ml-20 ">
+                    <p class="custom-font-poppins-regular text-[16px] md:text-[18.48px] leading-relaxed ">
                         Our mission is to design and build cutting-edge mobility solutions, not just to compete, but to make a real impact.
                     </p>
                 </div>
 
-                <div class="pt-4 animate-fade-in-down animation-delay-600 hidden-on-load"> {{-- Tambahkan hidden-on-load --}}
+                <div class="pt-4 animate-fade-in-down-1 animation-delay-600 hidden-on-load"> {{-- Tambahkan hidden-on-load --}}
                     <a href="{{ route('about') }}" 
-                       class="bg-[#FF5733] text-white custom-font-sans-serif md:text-[20.48px] -ml-20 px-8 py-4 rounded-full font-bold text-lg hover:bg-[#E04422] transition duration-300 transform hover:scale-105 shadow-lg inline-flex items-center">
+                       class="bg-[#FF5733] text-white custom-font-sans-serif md:text-[20.48px] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#E04422] transition duration-300 transform hover:scale-105 shadow-lg inline-flex items-center">
                         More About Us
                         <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -79,16 +86,16 @@
             </div>
 
             {{-- image section --}}
-            <div class="relative flex justify-center items-center h-full animate-fade-in-right animation-delay-300 hidden-on-load ml-20 -mr-10">
+            <div class="relative flex justify-center items-center h-full animate-fade-in-right animation-delay-300 hidden-on-load lg:ml-20 lg:-mr-10 md:mx-auto"> {{-- Modifikasi di sini --}}
                 {{-- Ini adalah div frame gambar utama --}}
-                <div class="custom-image-frame w-[450px] h-[500px] rounded-[30px] overflow-hidden shadow-2xl -mt-10 ml-15 z-20 relative">
+                <div class="custom-image-frame w-[450px] h-[500px] rounded-[30px] overflow-hidden shadow-2xl -mt-10 z-20 relative">
                     {{-- Ganti img src="images/blank.png" dengan kode carousel --}}
                     <div class="carousel-container-about-section"> {{-- Wrapper baru untuk carousel, akan di-style untuk mengisi custom-image-frame --}}
                         <div class="carousel-slide-about-section">
                             <img src="{{ asset('images/photo1.png') }}" alt="Photo 1">
                             <img src="{{ asset('images/photo2.png') }}" alt="Photo 2">
                             <img src="{{ asset('images/photo3.png') }}" alt="Photo 3">
-                            <img src="{{ asset('images/photo4.png') }}" alt="Photo 4"> {{-- Pastikan nama file cocok --}}
+                            <img src="{{ asset('images/photo4.png') }}" alt="Photo 4">
                         </div>
 
                         <button class="carousel-btn-about-section prev" aria-label="Previous Slide">&#10094;</button>
@@ -98,38 +105,39 @@
                             <span class="dot-about-section active" data-slide-index="0"></span>
                             <span class="dot-about-section" data-slide-index="1"></span>
                             <span class="dot-about-section" data-slide-index="2"></span>
-                            <span class="dot-about-section" data-slide-index="3"></span> {{-- Tambahkan dot untuk photo4.png --}}
+                            <span class="dot-about-section" data-slide-index="3"></span>
                         </div>
                     </div>
 
                     {{-- Gambar Elips Kiri (sekarang relatif terhadap custom-image-frame) --}}
                     <img src="{{ asset('images/Ellipse-left.png') }}" alt="Left Ellipse Frame" class="absolute z-10 custom-ellipse-left mt-5">
-
+                    
                     {{-- Gambar Elips Kanan (sekarang relatif terhadap custom-image-frame) --}}
-                    <img src="{{ asset('images/Ellipse-right.png') }}" alt="Right Ellipse Frame" class="absolute z-10 custom-ellipse-right mt-55"> {{-- Hapus mt-55 --}}
+                    <img src="{{ asset('images/Ellipse-right.png') }}" alt="Right Ellipse Frame" class="absolute z-10 custom-ellipse-right mt-55">
                 </div>
-            </div>
+            </div>        
         </div>
     </div>
 </section>
 
 {{-- Achivement Section --}}
-<section class="py-50 bg-[#120E0E] overflow-hidden">
+<section class="py-20 bg-[#120E0E]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            
             {{-- Left Column: OUR ACHIEVEMENT --}}
-            <div class="text-left animate-fade-in-left hidden-on-load animation-delay-0"> {{-- Tambahkan animasi fade-in-left --}}
-                <h2 class="text-7xl md:text-8xl lg:text-[119.11px] custom-font-bebas-neue-1 font-bold text-white leading-none tracking-tight -ml-20">
+            <div class="text-left animate-fade-in-left animation-delay-300"> {{-- Tambahkan animasi fade-in-left --}}
+                <h2 class="text-7xl md:text-8xl lg:text-[119.11px] custom-font-bebas-neue-1 font-bold text-white leading-none tracking-tight">
                     OUR <br> ACHIEVEMENT
                 </h2>
             </div>
 
             {{-- Right Column: Award Details --}}
-            <div class="text-left animate-fade-in-right hidden-on-load animation-delay-300"> {{-- Tambahkan animasi fade-in-right --}}
+            <div class="text-left animate-fade-in-right animation-delay-300 hidden-on-load"> {{-- Tambahkan animasi fade-in-right --}}
                 <h3 class="text-xl md:text-4xl custom-font-bebas-neue-1 font-bold text-white mb-4">
                     THE BEST NEWCOMER TEAM AWARD KMHE - 2022
                 </h3>
-                <p class="text-base text-gray-300 custom-font-poppins-regular leading-relaxed -mr-20">
+                <p class="text-base text-gray-300 custom-font-poppins-regular leading-relaxed ">
                     Delta Vox, the energy-efficient vehicle team from UPN "Veteran" East Java, made an impressive debut at the 2022 Indonesia Energy-Saving Car Competition (KMHE) by winning the Best Newcomer Team Award. With their first-ever energy-efficient car, Kalimasada
                 </p>
             </div>
@@ -137,12 +145,16 @@
 
         {{-- Image of the car below the text --}}
         <div class="mt-16 flex justify-center animate-fade-in-up hidden-on-load animation-delay-600"> {{-- Tambahkan animasi fade-in-up (dari bawah) --}}
-            <div class="relative custom-image-achievement-wrapper overflow-hidden rounded-xl shadow-lg">
+            <div class="relative custom-image-achievement-wrapper overflow-hidden rounded-xl shadow-lg
+            h-[400px] w-[1200px] 
+            md:h-[500px] md:w-[1300px] 
+            lg:h-[600px] lg:w-[1400px]
+            ">
                 <img src="{{ asset('images/car-achievement.png') }}" alt="Deltavox Car Achievement" class="w-full h-full object-cover">
 
                 {{-- Overlay Gradien dan Teks saat Hover --}}
                 <div class="absolute inset-0 bg-transparent flex items-end justify-end p-8 opacity-0 transition-opacity duration-300 ease-in-out custom-overlay">
-                    <div class="text-white md:text-8xl mb-12 custom-font-bebas-neue-1 font-bold uppercase transition-transform duration-300 ease-in-out transform translate-y-full custom-overlay-text">
+                    <div class="text-white text-4xl md:text-8xl mb-12 custom-font-bebas-neue-1 font-bold uppercase transition-transform duration-300 ease-in-out transform translate-y-full custom-overlay-text">
                         SEE THE NEWS
                     </div>
                 </div>
@@ -150,493 +162,5 @@
         </div>
     </div>
 </section>
-
-<style>
-
-/* Custom Styles for Animations */
-@keyframes fade-in-up {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.animate-fade-in-up {
-    animation: fade-in-up 1s ease-out forwards;
-}
-
-@keyframes fade-in-down {
-    from {
-        opacity: 0;
-        transform: translateY(-30px); /* Mulai dari sedikit di atas */
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.animate-fade-in-down {
-    animation: fade-in-down 1s ease-out forwards;
-}
-
-.animation-delay-300 {
-    animation-delay: 0.3s;
-    opacity: 0;
-}
-
-.animation-delay-600 {  
-    animation-delay: 0.6s;
-    opacity: 0;
-}
-
-.line-clamp-3 {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-.animate-fade-in-down {
-    animation: fade-in-down 1s ease-out forwards;
-}
-
-@keyframes fade-in-right {
-    from {
-        opacity: 0;
-        transform: translateX(50px); /* Mulai dari sedikit di kanan */
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.animate-fade-in-right {
-    animation: fade-in-right 1s ease-out forwards;
-}
-
-@keyframes fade-in-left {
-    from {
-        opacity: 0;
-        transform: translateX(-50px); /* Mulai dari sedikit di kiri */
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.animate-fade-in-left {
-    animation: fade-in-left 1s ease-out forwards;
-}
-
-/* Pastikan hidden-on-load dan animation-delay kelas digunakan dengan benar */
-.hidden-on-load {
-    opacity: 0;
-}
-
-.animation-delay-0 {
-    animation-delay: 0s;
-}
-
-.animation-delay-300 {
-    animation-delay: 0.3s;
-}
-
-.animation-delay-600 {
-    animation-delay: 0.6s;
-}
-
-/* Custom Image Frame */
-.custom-image-frame {
-    /* Properti dasar untuk frame */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* Ubah ini jika Anda ingin menggeser seluruh frame */
-    /* Misalnya, jika Anda ingin menggeser seluruh frame ke atas dan kanan: */
-    /* margin-top: -60px; */ /* Geser frame ke atas */
-    /* margin-left: 100px; */ /* Geser frame ke kanan */
-}
-
-/* Penempatan Gambar Elips */
-.custom-ellipse-left {
-    top: 0;
-    height: 50%; /* Elips memanjang penuh tinggi frame */
-    width: auto; /* Menjaga rasio aspek */
-    object-fit: fill; /* Memastikan elips mengisi tinggi tanpa crop */
-    
-    /* Pengaturan posisi untuk elips kiri */
-    left: 0; /* Menempel ke sisi kiri frame */
-    margin-left: px; /* Geser ke luar dari frame sejauh 50px ke kiri */
-    /* Sesuaikan nilai -50px ini berdasarkan lebar gambar elips Anda dan seberapa jauh Anda ingin menampilkannya */
-}
-
-.custom-ellipse-right {
-    top: 0;
-    height: 50%; /* Elips memanjang penuh tinggi frame */
-    width: auto; /* Menjaga rasio aspek */
-    object-fit: fill; /* Memastikan elips mengisi tinggi tanpa crop */
-    
-    /* Pengaturan posisi untuk elips kanan */
-    right: 0; /* Menempel ke sisi kanan frame */
-    margin-right: -1.5px; /* Geser ke luar dari frame sejauh 50px ke kanan */
-    /* Sesuaikan nilai -50px ini berdasarkan lebar gambar elips Anda dan seberapa jauh Anda ingin menampilkannya */
-}
-
-/* Definisi gaya awal (tersembunyi) */
-.fade-in-hidden {
-    opacity: 0;
-    transform: translateY(30px); /* Atau nilai lain untuk efek awal */
-}
-
-.fade-in-right-hidden {
-    opacity: 0;
-    transform: translateX(50px); /* Untuk elemen yang fade-in dari kanan */
-}
-
-/* Custom CSS untuk gradien background */
-.custom-gradient-bg {
-    background: linear-gradient(to top,
-        #100C0C 0%,         /* Hitam di bagian paling bawah */
-        #6c6c6ca2 37%,         /* Abu-abu sedang di 37% dari bawah */
-        #E5E5E5 79%          /* Abu-abu terang di 79% dari bawah */
-    );
-}
-
-.custom-bg-banner {
-    background-color: #E5E5E5
-}
-
-.custom-bg-about {
-    background-color: #100C0C
-}
-
-.custom-placement-flow {
-    /* Sesuaikan nilai margin-bottom negatif untuk menarik teks ke bawah */
-    /* Mungkin perlu menyesuaikan nilai ini tergantung pada ukuran font h1 dan p */
-    margin-bottom: -30px;
-    text-align: left; 
-    padding-left: 430px;
-}
-
-/* Achievement Image Hover Effect */
-.custom-image-achievement-wrapper {
-    width: 1400px; /* Lebar frame gambar */
-    height: 600px; /* Tinggi frame gambar */
-    position: relative; /* Penting untuk absolute positioning overlay */
-    cursor: pointer; /* Menunjukkan ini bisa diinteraksikan */
-}
-
-/* Overlay yang akan muncul saat hover */
-.custom-overlay {
-    background: linear-gradient(to top, 
-        #120E0E 0%, /* Warna gelap di bagian bawah */
-        transparent 100% /* Transparan di bagian atas */
-    );
-    height: 50%; /* 1/2 dari tinggi gambar */
-    top: auto; /* Untuk menempatkan gradien di bagian bawah */
-    bottom: 0;
-    left: 0;
-    right: 0;
-    opacity: 0; /* Sembunyikan secara default */
-    transition: opacity 0.3s ease-in-out;
-}
-
-/* Teks di dalam overlay */
-.custom-overlay-text {
-    transform: translateY(100%); /* Sembunyikan teks di luar view */
-    transition: transform 0.3s ease-in-out;
-}
-
-/* Hover state */
-.custom-image-achievement-wrapper:hover .custom-overlay {
-    opacity: 1; /* Tampilkan overlay saat hover */
-}
-
-.custom-image-achievement-wrapper:hover .custom-overlay-text {
-    transform: translateY(0); /* Geser teks ke posisi terlihat saat hover */
-}
-
-/* Custom fonts */
-/* Hapus Anton dari sini jika ingin menghostingnya secara lokal */
-/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap'); */
-
-/* Aturan @font-face untuk Anton jika di-host secara lokal */
-@font-face {
-    font-family: 'Anton';
-    src: url('../fonts/Anton-Regular.ttf') format('truetype'); /* Pastikan path ini benar */
-    font-weight: 400; /* Anton biasanya hanya memiliki satu weight (Regular) */
-    font-style: normal;
-    font-display: swap;
-}
-
-.custom-font-anton {
-    font-family: 'Anton', sans-serif;
-    letter-spacing: 0.025em;
-}
-
-.custom-font-sans-serif {
-    font-family: 'Inter', sans-serif; /* Mengasumsikan 'Sans Serif Collection' adalah Inter atau font sans-serif default */
-}
-
-@font-face {
-    font-family: 'Bebas Neue'; /* Nama untuk font ini */
-    src: url('../fonts/BebasNeue-Regular.ttf') format('truetype'); /* Sesuaikan path dan nama file */
-    font-weight: normal; /* Bebas Neue biasanya hanya memiliki satu ketebalan */
-    font-style: normal;
-    font-display: swap; /* Memperbaiki performa loading font */
-}
-
-.custom-font-bebas-neue {
-    font-family: 'Bebas Neue', sans-serif;
-    font-weight: 700;
-}
-
-.custom-font-bebas-neue-1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-weight: 700;
-    letter-spacing: 0.025em;
-}
-
-@font-face {
-    font-family: 'Poppins'; /* Nama font family */
-    src: url('../fonts/poppins/Poppins-Regular.ttf') format('truetype'); /* Path ke file Poppins Regular */
-    font-weight: 400; /* Ketebalan untuk Regular */
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Poppins'; /* Nama font family yang sama */
-    src: url('../fonts/poppins/Poppins-Bold.ttf') format('truetype'); /* Path ke file Poppins Bold */
-    font-weight: 700; /* Ketebalan untuk Bold */
-    font-style: normal;
-    font-display: swap;
-}
-
-.custom-font-poppins-bold {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700; /* Bold */
-}
-
-.custom-font-poppins-regular {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400; /* Regular */
-}
-
-/* carousel css */
-/* ... (kode CSS lainnya) ... */
-
-/* Carousel Styles for About Section */
-.carousel-container-about-section {
-    position: relative;
-    width: 100%; /* Agar mengisi custom-image-frame */
-    height: 100%; /* Agar mengisi custom-image-frame */
-    overflow: hidden;
-    /* border-radius: inherit; */ /* Warisi border-radius dari parent custom-image-frame */
-    /* box-shadow: inherit; */ /* Warisi shadow dari parent custom-image-frame */
-    /* Pastikan border-radius dan shadow sudah di custom-image-frame */
-}
-
-.carousel-slide-about-section {
-    display: flex;
-    width: 100%;
-    transition: transform 1.6s ease-in-out;
-    height: 100%; /* Pastikan slide mengisi tinggi container */
-}
-
-.carousel-slide-about-section img {
-    width: 100%;
-    flex-shrink: 0;
-    display: block;
-    height: 100%; /* Agar gambar mengisi tinggi slide */
-    object-fit: cover;
-}
-
-.carousel-btn-about-section {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 24px;
-    border-radius: 50%;
-    z-index: 30; /* Tinggikan z-index agar di atas elips */
-    transition: background-color 0.3s ease;
-}
-
-.carousel-btn-about-section:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-.carousel-btn-about-section.prev {
-    left: 10px;
-}
-
-.carousel-btn-about-section.next {
-    right: 10px;
-}
-
-.carousel-dots-about-section {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 8px;
-    z-index: 30; /* Tinggikan z-index agar di atas elips */
-}
-
-.dot-about-section {
-    width: 12px;
-    height: 12px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.dot-about-section.active {
-    background-color: white;
-}
-
-</style>
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-    // KODE JAVASCRIPT LAMA UNTUK ANIMASI FADE-IN SAAT SCROLL DI SINI...
-    const animatedElements = document.querySelectorAll('.animate-fade-in-down, .animate-fade-in-right, .animate-fade-in-up');
-
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-    };
-
-    const observerCallback = (entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.remove('hidden-on-load');
-                observer.unobserve(entry.target);
-            }
-        });
-    };
-
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-    animatedElements.forEach(element => {
-        if (!element.classList.contains('hidden-on-load')) {
-            element.classList.add('hidden-on-load');
-        }
-        observer.observe(element);
-    });
-
-    // KODE JAVASCRIPT BARU UNTUK CAROUSEL DIMULAI DI SINI
-    const carouselSlideAbout = document.querySelector('.carousel-slide-about-section');
-    const carouselImagesAbout = document.querySelectorAll('.carousel-slide-about-section img');
-    const prevBtnAbout = document.querySelector('.carousel-btn-about-section.prev');
-    const nextBtnAbout = document.querySelector('.carousel-btn-about-section.next');
-    const dotsContainerAbout = document.querySelector('.carousel-dots-about-section');
-    const dotsAbout = document.querySelectorAll('.dot-about-section');
-
-    let counterAbout = 0;
-    // Pastikan size dihitung setelah gambar dimuat atau pada resize
-    let sizeAbout = carouselImagesAbout[0] ? carouselImagesAbout[0].clientWidth : 0; 
-
-    // Set posisi awal carousel
-    if (carouselSlideAbout && sizeAbout > 0) {
-        carouselSlideAbout.style.transform = 'translateX(' + (-sizeAbout * counterAbout) + 'px)';
-    }
-
-    // Fungsi untuk memperbarui indikator titik
-    function updateDotsAbout() {
-        dotsAbout.forEach(dot => dot.classList.remove('active'));
-        if (dotsAbout[counterAbout]) { // Tambahkan pengecekan null/undefined
-            dotsAbout[counterAbout].classList.add('active');
-        }
-    }
-
-    // Fungsi untuk menggeser slide ke depan
-    function nextSlideAbout() {
-        if (counterAbout >= carouselImagesAbout.length - 1) {
-            counterAbout = 0;
-        } else {
-            counterAbout++;
-        }
-        carouselSlideAbout.style.transform = 'translateX(' + (-sizeAbout * counterAbout) + 'px)';
-        updateDotsAbout();
-    }
-
-    // Fungsi untuk menggeser slide ke belakang
-    function prevSlideAbout() {
-        if (counterAbout <= 0) {
-            counterAbout = carouselImagesAbout.length - 1;
-        } else {
-            counterAbout--;
-        }
-        carouselSlideAbout.style.transform = 'translateX(' + (-sizeAbout * counterAbout) + 'px)';
-        updateDotsAbout();
-    }
-
-    // Tombol Next
-    if (nextBtnAbout) { // Pastikan tombol ada sebelum menambahkan event listener
-        nextBtnAbout.addEventListener('click', () => {
-            nextSlideAbout();
-            resetAutoSlideAbout();
-        });
-    }
-
-    // Tombol Previous
-    if (prevBtnAbout) { // Pastikan tombol ada sebelum menambahkan event listener
-        prevBtnAbout.addEventListener('click', () => {
-            prevSlideAbout();
-            resetAutoSlideAbout();
-        });
-    }
-
-    // Navigasi dengan titik
-    if (dotsContainerAbout) { // Pastikan container dots ada
-        dotsContainerAbout.addEventListener('click', (e) => {
-            if (e.target.classList.contains('dot-about-section')) {
-                const slideIndex = parseInt(e.target.dataset.slideIndex);
-                counterAbout = slideIndex;
-                carouselSlideAbout.style.transform = 'translateX(' + (-sizeAbout * counterAbout) + 'px)';
-                updateDotsAbout();
-                resetAutoSlideAbout();
-            }
-        });
-    }
-
-    const autoSlideIntervalAbout = 3000;
-    let slideIntervalAbout = setInterval(nextSlideAbout, autoSlideIntervalAbout);
-
-    function resetAutoSlideAbout() {
-        clearInterval(slideIntervalAbout);
-        slideIntervalAbout = setInterval(nextSlideAbout, autoSlideIntervalAbout);
-    }
-
-    // Opsional: Respon terhadap perubahan ukuran window (untuk update ukuran slide)
-    window.addEventListener('resize', () => {
-        if (carouselImagesAbout[0]) { // Pastikan ada gambar sebelum mengakses clientWidth
-            sizeAbout = carouselImagesAbout[0].clientWidth;
-            if (carouselSlideAbout) {
-                 carouselSlideAbout.style.transform = 'translateX(' + (-sizeAbout * counterAbout) + 'px)';
-            }
-        }
-    });
-
-    // Panggil updateDotsAbout() saat inisialisasi untuk memastikan titik aktif diatur dengan benar
-    updateDotsAbout();
-});
-</script>
 
 @endsection

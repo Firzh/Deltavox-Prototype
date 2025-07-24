@@ -13,14 +13,14 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
     
     <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite('resources/js/app.js')
 </head>
-<body class="font-sans antialiased bg-white">
+<body class="font-sans antialiased bg-white ">
     <!-- Navigation -->
     @include('layouts.nav-1 ') {{-- Ini adalah baris baru untuk menyertakan navbar --}}
 
     <!-- Main Content -->
-    <main class="pt-16">
+    <main class="pt-16 ">
         @yield('content')
     </main>
 
@@ -43,11 +43,11 @@
             </div>            
 
             <!-- Service -->
-            <div class="text-center md:text-left">
-                <h4 class="font-bold mb-2">‎ ‎ Service</h4>
+            <div class="text-center md:text-left lg:ml-2">
+                <h4 class="font-bold mb-2 "> Service</h4>
                 <ul class="space-y-1">
-                    <li><a href="#" class="hover:underline">‎ ‎ Send Us a Letter</a></li>
-                    <li><a href="#" class="hover:underline">‎ ‎ Visit Us</a></li>
+                    <li><a href="#" class="hover:underline"> Send Us a Letter</a></li>
+                    <li><a href="#" class="hover:underline">Visit Us</a></li>
                 </ul>
             </div>
 
@@ -93,12 +93,5 @@
         <p class="text-center text-sm">&copy; Copyright 2025 · All Rights Reserved</p>
     </footer>
 
-    <!-- Mobile Menu Script -->
-    <script>
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenu.classList.toggle('hidden');
-        });
-    </script>
 </body>
 </html>
