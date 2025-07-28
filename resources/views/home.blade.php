@@ -6,7 +6,7 @@
 @section('description', 'Deltavox adalah komunitas mahasiswa yang berdedikasi mengembangkan teknologi mobil listrik dan menciptakan masa depan transportasi berkelanjutan.')
 
 @section('content')
-<section class="relative bg-white h-[70vh] md:h-[90vh] lg:h-[100vh] xl:h-[100vh] 2xl:h-[100vh] flex items-center overflow-hidden custom-bg-banner">
+<section id="banner-section" class="relative bg-white h-[70vh] md:h-[90vh] lg:h-[100vh] xl:h-[100vh] 2xl:h-[100vh] flex items-center overflow-hidden custom-bg-banner">
     
     {{-- Ubah background dari section, tambahkan overflow-hidden --}}
     {{-- Background utama section yang lebih besar --}}
@@ -20,7 +20,7 @@
     {{-- 'custom-gradient-bg' adalah kelas CSS kustom untuk gradien --}}
 
     <div class="absolute bottom-0 left-1/2 animate-fade-in-right-1 animation-delay-200 transform -translate-x-1/2 car-image-container z-10
-    h-[400px] w-[700px] 
+    h-[300px] w-[600px] 
     md:h-[700px] md:w-[1050px] 
     lg:h-[850px] lg:w-[1275px] ">
         <img src="{{ asset('images/car-home.png') }}" alt="Mobil Listrik Deltavox" class="absolute bottom-0 left-0 w-full h-auto object-contain">
@@ -30,12 +30,12 @@
     <div class="relative z-0 mb-48 sm:mb-50 md:mb-96 lg:mb-120 mt-30 text-center w-full px-4 sm:px-6 lg:px-8"> {{-- Ubah z-30 menjadi z-0 atau z-lowest --}}
         <div class="space-y-10 "> {{-- Mengurangi space-y karena ukuran font besar --}}
             <div class="animate-fade-in-down animation-delay-0">
-                <p class="text-black custom-font-sans-serif text-xl md:text-[28.03px] lg:text-[28.03px] font-normal leading-normal tracking-normal -mb-8 -ml-20 md:-ml-68 lg:-ml-105">
+                <p class="text-black custom-font-sans-serif text-lg md:text-[28.03px] lg:text-[28.03px] font-normal leading-normal tracking-normal -mb-8 sm:-ml-0 md:-ml-68 lg:-ml-105">
                     When focus goes energy flows
                 </p>
             </div>
             <div class="animate-fade-in-down animation-delay-300">
-                <h1 class="text-black custom-font-anton text-[90px] md:text-[166px] lg:text-[203.96px] font-normal leading-none tracking-tighter custom-letter-spacing">
+                <h1 class="text-black custom-font-anton text-[60px] md:text-[166px] lg:text-[203.96px] font-normal leading-none tracking-tighter custom-letter-spacing">
                     DELTA VOX
                 </h1>
             </div>
@@ -44,7 +44,7 @@
 </section>
 
 {{-- About Section --}}
-<section class="py-45 min-h-screen bg-[#120E0E]">
+<section id="about-section" class="py-45 min-h-screen bg-[#120E0E]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div class="space-y-6">

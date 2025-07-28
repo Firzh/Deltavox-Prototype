@@ -2,32 +2,27 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('title', 'Deltavox - Klub Mobil Listrik')</title>
     <meta name="description" content="@yield('description', 'Deltavox adalah komunitas mahasiswa yang fokus pada pengembangan teknologi mobil listrik dan sustainable transportation.')">
     
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
     
-    <!-- Scripts -->
     @vite('resources/js/app.js')
 </head>
 <body class="font-sans antialiased bg-white ">
-    <!-- Navigation -->
-    @include('layouts.nav-1 ') {{-- Ini adalah baris baru untuk menyertakan navbar --}}
+    @include('layouts.nav-1', ['id' => 'navbar-white']) {{-- Add an ID for easy targeting --}}
+    @include('layouts.nav-2', ['id' => 'navbar-dark']) {{-- Add an ID and initially hide it --}}    
 
-    <!-- Main Content -->
     <main class="pt-16 ">
         @yield('content')
     </main>
 
-    <!-- Footer -->
     <footer class="bg-[#120E0E] text-white pt-12 pb-6">
         <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center md:items-start space-y-10 md:space-y-0">
-            <!-- Navigation -->
             <div class="text-center md:text-left">
                 <h4 class="font-bold mb-2">Navigation</h4>
                 <ul class="space-y-1">
@@ -42,7 +37,6 @@
             <div class="text-center md:text-left">
             </div>            
 
-            <!-- Service -->
             <div class="text-center md:text-left lg:ml-2">
                 <h4 class="font-bold mb-2 "> Service</h4>
                 <ul class="space-y-1">
@@ -54,7 +48,6 @@
             <div class="text-center md:text-left">
             </div>
 
-            <!-- Logo & Location -->
             <div class="flex flex-col items-center space-y-2">
                 <img src="/images/Logo Putih.png" alt="Logo" class="w-16 h-16" />
                 <div class="flex items-center space-x-1 text-sm">
@@ -63,7 +56,6 @@
                 </div>
             </div>
 
-            <!-- Connect With Us -->
             <div class="text-center">
                 <h4 class="font-bold mb-2">Connect With Us</h4>
                 <div class="flex space-x-3 justify-center">
@@ -73,25 +65,65 @@
                 </div>
             </div>
 
-            <!-- Assistance -->
             <div class="text-center">
                 <h4 class="font-bold mb-2">Assistance</h4>
                 <a href="#"><img src="/icons/WhatsApp Button.png" class="w-8 h-8 mx-auto" alt="WhatsApp"></a>
             </div>
 
-            <!-- Email -->
             <div class="text-center">
                 <h4 class="font-bold mb-2">Send Us an Email</h4>
                 <a href="#"><img src="/icons/Mail Button.png" class="w-8 h-8 mx-auto" alt="Email"></a>
             </div>
         </div>
 
-        <!-- Horizontal Line -->
         <hr class="my-6 border-white/50 mx-6" />
 
-        <!-- Copyright -->
         <p class="text-center text-sm">&copy; Copyright 2025 · All Rights Reserved</p>
     </footer>
 
-</body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbarWhite = document.getElementById('navbar-white');
+            const navbarDark = document.getElementById('navbar-dark');
+            const aboutSection = document.getElementById('about-section');
+
+            // Set initial state using opacity and pointer-events
+            if (navbarWhite) {
+                navbarWhite.style.opacity = '1';
+                navbarWhite.style.pointerEvents = 'auto';
+            }
+            if (navbarDark) {
+                navbarDark.style.opacity = '0';
+                navbarDark.style.pointerEvents = 'none';
+            }
+
+            window.addEventListener('scroll', function() {
+                const aboutSectionTop = aboutSection.getBoundingClientRect().top;
+                const scrollThreshold = 0; // Ubah nilai ini jika perlu
+
+                if (aboutSectionTop <= scrollThreshold) {
+                    // Navbar Dark aktif
+                    if (navbarWhite) {
+                        navbarWhite.style.opacity = '0';
+                        navbarWhite.style.pointerEvents = 'none';
+                    }
+                    if (navbarDark) {
+                        navbarDark.style.opacity = '1';
+                        navbarDark.style.pointerEvents = 'auto';
+                    }
+                } else {
+                    // Navbar White aktif
+                    if (navbarWhite) {
+                        navbarWhite.style.opacity = '1';
+                        navbarWhite.style.pointerEvents = 'auto';
+                    }
+                    if (navbarDark) {
+                        navbarDark.style.opacity = '0';
+                        navbarDark.style.pointerEvents = 'none';
+                    }
+                }
+            });
+        });
+    </script>
+    </body>
 </html>
