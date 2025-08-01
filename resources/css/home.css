@@ -226,18 +226,6 @@
 }
 
 /* Custom fonts */
-/* Hapus Anton dari sini jika ingin menghostingnya secara lokal */
-/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap'); */
-
-/* Aturan @font-face untuk Anton jika di-host secara lokal */
-@font-face {
-    font-family: 'Anton';
-    src: url('../fonts/Anton-Regular.ttf') format('truetype'); /* Pastikan path ini benar */
-    font-weight: 400; /* Anton biasanya hanya memiliki satu weight (Regular) */
-    font-style: normal;
-    font-display: swap;
-}
-
 .custom-font-anton {
     font-family: 'Anton', sans-serif;
     letter-spacing: 0.025em;
@@ -245,14 +233,6 @@
 
 .custom-font-sans-serif {
     font-family: 'Inter', sans-serif; /* Mengasumsikan 'Sans Serif Collection' adalah Inter atau font sans-serif default */
-}
-
-@font-face {
-    font-family: 'Bebas Neue'; /* Nama untuk font ini */
-    src: url('../fonts/BebasNeue-Regular.ttf') format('truetype'); /* Sesuaikan path dan nama file */
-    font-weight: normal; /* Bebas Neue biasanya hanya memiliki satu ketebalan */
-    font-style: normal;
-    font-display: swap; /* Memperbaiki performa loading font */
 }
 
 .custom-font-bebas-neue {
@@ -264,22 +244,6 @@
     font-family: 'Bebas Neue', sans-serif;
     font-weight: 700;
     letter-spacing: 0.025em;
-}
-
-@font-face {
-    font-family: 'Poppins'; /* Nama font family */
-    src: url('../fonts/poppins/Poppins-Regular.ttf') format('truetype'); /* Path ke file Poppins Regular */
-    font-weight: 400; /* Ketebalan untuk Regular */
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Poppins'; /* Nama font family yang sama */
-    src: url('../fonts/poppins/Poppins-Bold.ttf') format('truetype'); /* Path ke file Poppins Bold */
-    font-weight: 700; /* Ketebalan untuk Bold */
-    font-style: normal;
-    font-display: swap;
 }
 
 .custom-font-poppins-bold {

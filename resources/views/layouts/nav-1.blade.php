@@ -1,16 +1,16 @@
 {{-- resources/views/nav-1.blade.php --}}
 
-<nav id="{{ $id ?? 'navbar-white' }}" class="bg-white shadow-lg fixed w-full z-50 top-0">
+<nav id="{{ $id ?? 'navbar-white' }}" class="bg-[#E5E5E5] fixed w-full z-50 top-0">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-20 items-center">
             <div class="hidden md:flex items-center space-x-20">
-                <a href="{{ route('home') }}" class="nav-link {{ request()->routeIs('home') ? 'text-electric-blue' : '' }}">
+                <a href="{{ route('car') }}" class="font-normal hover:font-medium nav-link {{ request()->routeIs('car') ? 'text-electric-blue' : '' }}">
                     Car
                 </a>
-                <a href="{{ route('about') }}" class="nav-link {{ request()->routeIs('about') ? 'text-electric-blue' : '' }}">
+                <a href="{{ route('team') }}" class="font-normal hover:font-medium nav-link {{ request()->routeIs('team') ? 'text-electric-blue' : '' }}">
                     Team
                 </a>
-                <a href="{{ route('about') }}" class="nav-link {{ request()->routeIs('about') ? 'text-electric-blue' : '' }}">
+                <a href="{{ route('activities.index') }}" class="font-normal hover:font-medium nav-link {{ request()->routeIs('activities.*') ? 'text-electric-blue' : '' }}">
                     Activities
                 </a>
             </div>
@@ -23,10 +23,10 @@
             </div>
             
             <div class="hidden md:flex items-center space-x-20">
-                <a href="{{ route('events.index') }}" class="nav-link {{ request()->routeIs('events.*') ? 'text-electric-blue' : '' }}">
+                <a href="{{ route('partners.index') }}" class="font-normal hover:font-medium nav-link {{ request()->routeIs('partners.*') ? 'text-electric-blue' : '' }}">
                     Partners
                 </a>
-                <a href="{{ route('contact.index') }}" class="nav-link {{ request()->routeIs('contact.*') ? 'text-electric-blue' : '' }}">
+                <a href="{{ route('contact.index') }}" class="font-normal hover:font-medium nav-link {{ request()->routeIs('contact.*') ? 'text-electric-blue' : '' }}">
                     Contact
                 </a>
             </div>
@@ -43,20 +43,20 @@
 
     <div id="mobile-menu-white" class="md:hidden hidden">
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white shadow-lg">
-            <a href="{{ route('home') }}" class="block px-3 py-2 text-base font-medium nav-link {{ request()->routeIs('home') ? 'text-electric-blue' : '' }}">
-                Beranda
+            <a href="{{ route('car') }}" class="block px-3 py-2 text-base font-normal hover:font-medium nav-link {{ request()->routeIs('car') ? 'text-electric-blue' : '' }}">
+                Car
             </a>
-            <a href="{{ route('about') }}" class="block px-3 py-2 text-base font-medium nav-link {{ request()->routeIs('about') ? 'text-electric-blue' : '' }}">
-                Tentang Kami
+            <a href="{{ route('team') }}" class="block px-3 py-2 text-base font-normal hover:font-medium nav-link {{ request()->routeIs('team') ? 'text-electric-blue' : '' }}">
+                Team
             </a>
-            <a href="{{ route('projects.index') }}" class="block px-3 py-2 text-base font-medium nav-link {{ request()->routeIs('projects.*') ? 'text-electric-blue' : '' }}">
-                Proyek
+            <a href="{{ route('activities.index') }}" class="block px-3 py-2 text-base font-normal hover:font-medium nav-link {{ request()->routeIs('activities.*') ? 'text-electric-blue' : '' }}">
+                Activities
             </a>
-            <a href="{{ route('events.index') }}" class="block px-3 py-2 text-base font-medium nav-link {{ request()->routeIs('events.*') ? 'text-electric-blue' : '' }}">
-                Event
+            <a href="{{ route('partners.index') }}" class="block px-3 py-2 text-base font-normal hover:font-medium nav-link {{ request()->routeIs('partners.*') ? 'text-electric-blue' : '' }}">
+                Partners
             </a>
-            <a href="{{ route('contact.index') }}" class="block px-3 py-2 text-base font-medium nav-link {{ request()->routeIs('contact.*') ? 'text-electric-blue' : '' }}">
-                Kontak
+            <a href="{{ route('contact.index') }}" class="block px-3 py-2 text-base font-normal hover:font-medium nav-link {{ request()->routeIs('contact.*') ? 'text-electric-blue' : '' }}">
+                Contact
             </a>
         </div>
     </div>

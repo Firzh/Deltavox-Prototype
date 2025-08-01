@@ -4,13 +4,13 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-20 items-center">
             <div class="hidden md:flex items-center space-x-20"> {{-- space-x-20 untuk jarak antar item --}}
-                <a href="{{ route('home') }}" class="text-white hover:text-gray-300 transition duration-300"> {{-- Warna teks putih --}}
+                <a href="{{ route('car') }}" class="text-white font-normal hover:font-medium transition duration-300"> {{-- Warna teks putih --}}
                     Car
                 </a>
-                <a href="{{ route('about') }}" class="text-white hover:text-gray-300 transition duration-300">
+                <a href="{{ route('team') }}" class="text-white font-normal hover:font-medium transition duration-300">
                     Team
                 </a>
-                <a href="{{ route('about') }}" class="text-white hover:text-gray-300 transition duration-300">
+                <a href="{{ route('activities.index') }}" class="text-white font-normal hover:font-medium transition duration-300nav-link {{ request()->routeIs('activities.*') ? 'text-electric-blue' : '' }}">
                     Activities
                 </a>
             </div>
@@ -23,10 +23,10 @@
             </div>
             
             <div class="hidden md:flex items-center space-x-20"> {{-- space-x-20 untuk jarak antar item --}}
-                <a href="{{ route('events.index') }}" class="text-white hover:text-gray-300 transition duration-300">
+                <a href="{{ route('partners.index') }}" class="text-white font-normal hover:font-medium transition duration-300">
                     Partners
                 </a>
-                <a href="{{ route('contact.index') }}" class="text-white hover:text-gray-300 transition duration-300">
+                <a href="{{ route('contact.index') }}" class="text-white font-normal hover:font-medium transition duration-300">
                     Contact
                 </a>
             </div>
@@ -43,20 +43,20 @@
 
     <div id="mobile-menu-dark" class="md:hidden hidden">
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-[#2A2A2A] shadow-lg"> {{-- Warna background mobile menu disesuaikan --}}
-            <a href="{{ route('home') }}" class="block px-3 py-2 text-base font-medium text-white hover:bg-gray-700 transition duration-300">
-                Beranda
+            <a href="{{ route('car') }}" class="block px-3 py-2 text-base font-normal hover:font-medium text-white  transition duration-300">
+                Car
             </a>
-            <a href="{{ route('about') }}" class="block px-3 py-2 text-base font-medium text-white hover:bg-gray-700 transition duration-300">
-                Tentang Kami
+            <a href="{{ route('team') }}" class="block px-3 py-2 text-base font-normal hover:font-medium text-white  transition duration-300">
+                Team
             </a>
-            <a href="{{ route('projects.index') }}" class="block px-3 py-2 text-base font-medium text-white hover:bg-gray-700 transition duration-300">
-                Proyek
+            <a href="{{ route('activities.index') }}" class="block px-3 py-2 text-base font-normal hover:font-medium  text-white  transition duration-300 nav-link {{ request()->routeIs('activities.*') ? 'text-electric-blue' : '' }}">
+                Activities
             </a>
-            <a href="{{ route('events.index') }}" class="block px-3 py-2 text-base font-medium text-white hover:bg-gray-700 transition duration-300">
-                Event
+            <a href="{{ route('partners.index') }}" class="block px-3 py-2 text-base font-normal hover:font-medium text-white  transition duration-300">
+                Partners
             </a>
-            <a href="{{ route('contact.index') }}" class="block px-3 py-2 text-base font-medium text-white hover:bg-gray-700 transition duration-300">
-                Kontak
+            <a href="{{ route('contact.index') }}" class="block px-3 py-2 text-base font-normal hover:font-medium text-white  transition duration-300">
+                Contact
             </a>
         </div>
     </div>
