@@ -110,7 +110,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             
             {{-- Left Column: OUR ACHIEVEMENT --}}
-            <div class="text-left animate-fade-in-left-1 animation-delay-300">
+            <div class="text-left animate-fade-in-left-1 animation-delay-300 hidden-on-load">
                 <h2 class="text-6xl md:text-7xl lg:text-[119.11px] custom-font-bebas-neue-1 font-bold text-white leading-none tracking-tight">
                     OUR <br> ACHIEVEMENT
                 </h2>
