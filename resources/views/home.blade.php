@@ -27,7 +27,7 @@
         </div>
 
         {{-- Car Image --}}
-        <div class="w-[100%] md:w-[100%] lg:w-[80%] animate-fade-in-right-1 animation-delay-200 z-10">
+        <div class="w-[100%] md:w-[100%] lg:w-[80%] animate-fade-in-right animation-delay-200 z-10">
             <img src="{{ asset('images/car-home.png') }}" alt="Mobil Listrik Deltavox" class="w-full h-auto object-contain">
         </div>
     </div>
@@ -46,12 +46,12 @@
                     </h2>
 
                     {{-- "Energy-Efficient Car Research Team" --}}
-                    <h3 class="text-white custom-font-poppins-bold animate-fade-in-up animation-delay-300 text-xl md:text-3xl lg:text-[29.43px] font-bold leading-normal mb-8">
+                    <h3 class="text-white custom-font-poppins-bold animate-fade-in-up-1 animation-delay-300 text-xl md:text-3xl lg:text-[29.43px] font-bold leading-normal mb-8">
                         Energy-Efficient Car Research Team
                     </h3>
                 </div>
                 
-                <div class="prose prose-lg text-white space-y-4 animate-fade-in-up animation-delay-300 hidden-on-load">
+                <div class="prose prose-lg text-white space-y-4 animate-fade-in-up-1 animation-delay-300 hidden-on-load">
                     {{-- Paragraf pertama --}}
                     <p class="custom-font-poppins-regular text-base md:text-lg leading-relaxed">
                         We are currently developing innovative energy-efficient vehicles to drive a sustainable future.
@@ -75,7 +75,7 @@
             </div>
 
             {{-- image section --}}
-            <div class="relative flex justify-center items-center h-full animate-fade-in-right animation-delay-300 hidden-on-load">
+            <div class="relative flex justify-center items-center h-full animate-fade-in-right-1 animation-delay-300 hidden-on-load">
                 <div class="custom-image-frame max-w-sm w-full aspect-[4/5] rounded-[30px] overflow-hidden shadow-2xl z-20 relative">
                     <div class="carousel-container-about-section">
                         <div class="carousel-slide-about-section">
@@ -110,14 +110,14 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             
             {{-- Left Column: OUR ACHIEVEMENT --}}
-            <div class="text-left animate-fade-in-left animation-delay-300">
+            <div class="text-left animate-fade-in-left-1 animation-delay-300">
                 <h2 class="text-6xl md:text-7xl lg:text-[119.11px] custom-font-bebas-neue-1 font-bold text-white leading-none tracking-tight">
                     OUR <br> ACHIEVEMENT
                 </h2>
             </div>
 
             {{-- Right Column: Award Details --}}
-            <div class="text-left animate-fade-in-right animation-delay-300 hidden-on-load">
+            <div class="text-left animate-fade-in-right-1 animation-delay-300 hidden-on-load">
                 <h3 class="text-xl md:text-3xl custom-font-bebas-neue-1 font-bold text-white mb-4">
                     THE BEST NEWCOMER TEAM AWARD KMHE - 2022
                 </h3>
@@ -128,7 +128,7 @@
         </div>
 
         {{-- Image of the car below the text --}}
-        <div class="mt-16 flex justify-center animate-fade-in-up hidden-on-load animation-delay-600">
+        <div class="mt-16 flex justify-center animate-fade-in-up-1 hidden-on-load animation-delay-600">
             <div class="relative custom-image-achievement-wrapper overflow-hidden rounded-xl shadow-lg w-full max-w-5xl h-auto">
                 <img src="{{ asset('images/car-achievement.png') }}" alt="Deltavox Car Achievement" class="w-full h-auto object-cover">
                 
