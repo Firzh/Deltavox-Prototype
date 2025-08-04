@@ -30,11 +30,11 @@
     </div>
 </section>
 
-{{-- Section Kedua - Telah disesuaikan --}}
+{{-- Section Kedua - Menggabungkan kedua tata letak --}}
 <section id="car-gallery" class="bg-[#120E0E] py-12 md:py-16">
     <div class="container mx-auto px-8 mt-16 mb-6 lg:-mt-1 xl:-mt-30 grid grid-cols-1 items-center gap-6 md:gap-16 lg:gap-24 relative z-20 py-1">
         {{-- Menggunakan grid untuk menampung semua gambar --}}
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
             
             {{-- Deskripsi --}}
             <div class="col-span-full max-w-6xl animate-fade-in-up-1 animation-delay-200 hidden-on-load">
@@ -42,19 +42,46 @@
                     Photos
                 </p>
             </div>
-
-            {{-- Gambar-gambar kecil --}}
-            <div class="w-full h-full">
+            
+            {{-- Layout untuk Desktop/Tablet (md ke atas): Gambar Individu --}}
+            <div class="w-full h-full hidden md:block">
                 <img src="{{ asset('images/car1.png') }}" alt="Mobil Deltavox 1" class="w-full h-full object-cover rounded-lg animate-fade-in-down-1 animation-delay-200 hidden-on-load">
             </div>
-            <div class="w-full h-full">
+            <div class="w-full h-full hidden md:block">
                 <img src="{{ asset('images/car2.png') }}" alt="Mobil Deltavox 2" class="w-full h-full object-cover rounded-lg animate-fade-in-down-1 animation-delay-200 hidden-on-load">
             </div>
-            <div class="w-full h-full">
+            <div class="w-full h-full hidden md:block">
                 <img src="{{ asset('images/car3.png') }}" alt="Mobil Deltavox 3" class="w-full h-full object-cover rounded-lg animate-fade-in-down-1 animation-delay-200 hidden-on-load">
             </div>
-            <div class="w-full h-full">
+            <div class="w-full h-full hidden md:block">
                 <img src="{{ asset('images/car4.png') }}" alt="Mobil Deltavox 4" class="w-full h-full object-cover rounded-lg animate-fade-in-down-1 animation-delay-200 hidden-on-load">
+            </div>
+
+            {{-- Layout untuk Ponsel (sm ke bawah): Carousel --}}
+            <div class="w-full h-auto col-span-1 lg:col-span-1 block md:hidden relative carousel-container-car-1 overflow-hidden rounded-lg animate-fade-in-down-1 animation-delay-200 hidden-on-load" data-interval="3000">
+                <div class="carousel-slide-car-1 flex transition-transform duration-500 ease-in-out">
+                    <img src="{{ asset('images/car1.png') }}" alt="Mobil Deltavox 1" class="w-full h-full object-cover rounded-lg flex-shrink-0">
+                    <img src="{{ asset('images/car2.png') }}" alt="Mobil Deltavox 2" class="w-full h-full object-cover rounded-lg flex-shrink-0">
+                </div>
+                {{-- <button class="carousel-btn-car-1 prev" aria-label="Previous Slide">&#10094;</button>
+                <button class="carousel-btn-car-1 next" aria-label="Next Slide">&#10095;</button> --}}
+                {{-- <div class="carousel-dots-car-1 absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                    <span class="dot-car-1 active" data-slide-index="0"></span>
+                    <span class="dot-car-1" data-slide-index="1"></span>
+                </div> --}}
+            </div>
+
+            <div class="w-full h-auto col-span-1 lg:col-span-1 block md:hidden relative carousel-container-car-2 overflow-hidden rounded-lg animate-fade-in-down-1 animation-delay-200 hidden-on-load" data-interval="3100">
+                <div class="carousel-slide-car-2 flex transition-transform duration-500 ease-in-out">
+                    <img src="{{ asset('images/car3.png') }}" alt="Mobil Deltavox 3" class="w-full h-full object-cover rounded-lg flex-shrink-0">
+                    <img src="{{ asset('images/car4.png') }}" alt="Mobil Deltavox 4" class="w-full h-full object-cover rounded-lg flex-shrink-0">
+                </div>
+                {{-- <button class="carousel-btn-car-2 prev" aria-label="Previous Slide">&#10094;</button>
+                <button class="carousel-btn-car-2 next" aria-label="Next Slide">&#10095;</button>
+                <div class="carousel-dots-car-2 absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                    <span class="dot-car-2 active" data-slide-index="0"></span>
+                    <span class="dot-car-2" data-slide-index="1"></span>
+                </div> --}}
             </div>
 
             {{-- Gambar besar yang menempati seluruh lebar grid --}}

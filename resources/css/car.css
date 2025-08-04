@@ -1,0 +1,71 @@
+/* Carousel Styles for Car Blade */
+.carousel-container-car-1, .carousel-container-car-2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel-slide-car-1, .carousel-slide-car-2 {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-slide-car-1 img, .carousel-slide-car-2 img {
+    width: 100%;
+    flex-shrink: 0;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-btn-car-1, .carousel-btn-car-2 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    z-index: 30;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-btn-car-1:hover, .carousel-btn-car-2:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-btn-car-1.prev, .carousel-btn-car-2.prev {
+    left: 10px;
+}
+
+.carousel-btn-car-1.next, .carousel-btn-car-2.next {
+    right: 10px;
+}
+
+.carousel-dots-car-1, .carousel-dots-car-2 {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 30;
+}
+
+.dot-car-1, .dot-car-2 {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot-car-1.active, .dot-car-2.active {
+    background-color: white;
+}
