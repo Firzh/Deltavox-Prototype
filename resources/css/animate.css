@@ -12,7 +12,7 @@
 
 /* kalau ada cover berarti as you scroll */
 .animate-fade-in-up {
-    animation: fade-in-up 1s ease-in-out forwards;
+    animation: fade-in-up 1s ease-out forwards;
 }
 
 .animate-fade-in-up-1 {
@@ -76,7 +76,7 @@
 }
 
 .animate-fade-in-left {
-    animation: fade-in-left 1s ease-in-out forwards;
+    animation: fade-in-left 1s ease-out forwards;
 }
 
 .animate-fade-in-left-1 {
