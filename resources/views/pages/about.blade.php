@@ -7,7 +7,7 @@
 <section id="dark-section" class="relative w-full h-[60dvh] md:h-[74dvh] lg:h-[140dvh] xl:h-[120dvh] 2xl:h-[140dvh] bg-[#120E0E] flex items-center justify-center overflow-hidden">
     <div class="container mx-auto px-4 mt-16 mb-6 xl:-mt-40 grid grid-cols-1 items-center gap-6 md:gap-16 lg:gap-24 relative z-20 py-1">
 
-        {{-- Konten Teks Sesuai image_4d3ee6.png --}}
+        {{-- Konten Teks --}}
         <div class=" mb-20 -mt-10 md:-mt-10 md:mb-20 lg:mt-30 lg:mb-10 xl:mt-0 xl:mb-10 animate-fade-in animation-delay-200 order-1">
             <h1 class="text-[#FDDA7C] custom-font-bebas-neue-light font-bold text-center leading-none uppercase text-3xl md:text-6xl lg:text-[132.42px]">
                 ABOUT DELTA VOX
@@ -54,6 +54,23 @@
                 </div>
                 
             </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-[#120E0E] py-20">
+    <div class="max-w-7xl mx-auto px-4">
+        {{-- Konten Teks diatur dalam grid satu kolom --}}
+        <div class="grid grid-cols-1 gap-4 text-left ml-8 mb-40 mr-8 md:ml-12 lg:ml-8 xl:ml-0">
+            <h1 class="text-[#FDDA7C] custom-font-bebas-neue-light font-bold leading-none uppercase text-2xl md:text-3xl lg:text-[44.66px] animate-fade-in-up-1 animation-delay-200">
+                DELTA VOX HISTORY
+            </h1>
+            <p class="text-white custom-font-poppins-regular leading-relaxed text-xs sm:text-[14px] lg:text-[24px] animate-fade-in-up-1 animation-delay-200">
+                Founded in 2022, Delta Vox was born from a shared vision among passionate students aiming to revolutionize energy-efficient mobility.
+            </p>
+            <p class="text-white custom-font-poppins-regular leading-relaxed text-xs sm:text-[14px] lg:text-[24px] animate-fade-in-up-1 animation-delay-200">
+                With a commitment to innovation and sustainability, Delta Vox has continually pushed the boundaries of automotive technology, focusing on the development of fuel-efficient vehicles that redefine the future of transportation.
+            </p>
         </div>
     </div>
 </section>
