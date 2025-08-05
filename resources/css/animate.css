@@ -1,4 +1,85 @@
 /* Custom Styles for Animations */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: scale(0.85); 
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-fade-in {
+    animation: fade-in 1s ease-out forwards;
+}
+
+.animate-fade-in-1 {
+    animation: fade-in 1s ease-in-out forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+/* wave */
+@keyframes fade-in-wave-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    25% {
+        opacity: 0.7;
+        transform: translateY(50px); /* Bergerak turun lebih dulu */
+    }
+    60% {
+        opacity: 0.85;
+        transform: translateY(-40px); /* Lalu bergerak sedikit ke atas */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Terakhir kembali ke posisi semula */
+    }
+}
+
+.animate-fade-in-wave-down {
+    animation: fade-in-wave-down 1.4s ease-out forwards;
+}
+
+.animate-fade-in-wave-down-1 {
+    animation: fade-in-wave-down 1s ease-in-out forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+@keyframes fade-in-wave-up {
+    0% {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    25% {
+        opacity: 0.7;
+        transform: translateY(-50px); /* Bergerak turun lebih dulu */
+    }
+    50% {
+        opacity: 0.85;
+        transform: translateY(40px); /* Lalu bergerak sedikit ke atas */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Terakhir kembali ke posisi semula */
+    }
+}
+
+.animate-fade-in-wave-up {
+    animation: fade-in-wave-up 2s ease-out forwards;
+}
+
+.animate-fade-in-wave-up-1 {
+    animation: fade-in-wave-up 1s ease-in-out forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+/* fade in direction */
 @keyframes fade-in-up {
     from {
         opacity: 0;
@@ -92,14 +173,17 @@
 
 .animation-delay-0 {
     animation-delay: 0s;
+    opacity: 0;
 }
 
 .animation-delay-200 {
     animation-delay: 0.2s;
+    opacity: 0;
 }
 
 .animation-delay-300 {
     animation-delay: 0.3s;
+    opacity: 0;
 }
 
 .animation-delay-400 {

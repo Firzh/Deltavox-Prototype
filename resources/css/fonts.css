@@ -1,0 +1,36 @@
+/* Custom fonts */
+.custom-font-anton {
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 0.025em;
+}
+
+.custom-font-sans-serif {
+    font-family: 'Inter', sans-serif; /* Mengasumsikan 'Sans Serif Collection' adalah Inter atau font sans-serif default */
+}
+
+.custom-font-bebas-neue {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 700;
+}
+
+.custom-font-bebas-neue-1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+}
+
+.custom-font-bebas-neue-light {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+}
+
+.custom-font-poppins-bold {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700; /* Bold */
+}
+
+.custom-font-poppins-regular {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400; /* Regular */
+}

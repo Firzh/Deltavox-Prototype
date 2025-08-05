@@ -14,12 +14,12 @@
     {{-- Banner Content --}}
     <div class="relative z-10 w-full px-4 sm:px-6 lg:px-8 flex flex-col items-center">
         <div class="space-y-4 text-center mt-auto -mb-6 md:-mb-10 lg:-mb-4 xl:-mb-28 2xl:-mb-48">
-            <div class="animate-fade-in-down animation-delay-0">
+            <div class="animate-fade-in-down animation-delay-300">
                 <p class="text-black text-left custom-font-sans-serif text-lg md:text-2xl lg:text-3xl font-normal leading-normal tracking-normal">
                     When focus goes energy flows
                 </p>
             </div>
-            <div class="animate-fade-in-down animation-delay-300">
+            <div class="animate-fade-in-down animation-delay-200">
                 <h1 class="text-black custom-font-anton text-6xl md:text-[160px] lg:text-[180px] xl:text-[203.96px] font-normal leading-none tracking-tighter custom-letter-spacing">
                     DELTA VOX
                 </h1>
@@ -63,7 +63,7 @@
                     </p>
                 </div>
 
-                <div class="pt-4 animate-fade-in-down-1 animation-delay-600 hidden-on-load">
+                <div class="pt-4 animate-fade-in-up-1 animation-delay-400 hidden-on-load">
                     <a href="{{ route('about') }}" 
                        class="bg-[#FF5733] text-white custom-font-sans-serif md:text-lg px-8 py-4 rounded-full font-bold text-lg hover:bg-[#E04422] transition duration-300 transform hover:scale-105 shadow-lg inline-flex items-center">
                         More About Us
