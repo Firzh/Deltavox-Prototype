@@ -84,12 +84,34 @@
             </div>
 
             {{-- Kolom Kedua: Teks --}}
-            <div class="text-left animate-fade-in-right-1 animation-delay-200 order-2">
-                <p class="text-white custom-font-poppins-regular leading-relaxed text-xs sm:text-[14px] lg:text-[24px]">
+            <div class="text-left order-2">
+                <p class="text-white custom-font-poppins-regular leading-relaxed text-xs sm:text-[14px] lg:text-[24px] animate-fade-in-right-1 animation-delay-200">
                     From its humble beginnings as a student-led initiative, Delta Vox has grown into a dedicated organization that competes in national and international competitions. 
                 </p>
-                <p class="text-white custom-font-poppins-regular leading-relaxed text-xs sm:text-[14px] lg:text-[24px] mt-4">
+                <p class="text-white custom-font-poppins-regular leading-relaxed text-xs sm:text-[14px] lg:text-[24px] mt-4 animate-fade-in-right-1 animation-delay-200">
                     Through rigorous research, design, and engineering, our team continuously refines and enhances our vehicle prototypes, setting new standards in the field of energy-efficient mobility.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-[#120E0E] py-20">
+    <div class="max-w-7xl mx-auto px-4">
+        {{-- Menggunakan kelas grid dan spacing yang sama dengan section 3 --}}
+        <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8 ml-8 mb-40 mr-8 md:ml-12 lg:ml-8 xl:ml-0">
+            {{-- Kolom Pertama: Gambar --}}
+            <div class="animate-fade-in-up-1 animation-delay-200 order-1">
+                <img src="{{ asset('images/about-part-4.png') }}" alt="Kalimasada Car About" class="w-full h-auto object-contain">
+            </div>
+
+            {{-- Kolom Kedua: Teks --}}
+            <div class="text-left order-2">
+                <p class="text-white custom-font-poppins-regular leading-relaxed text-xs sm:text-[14px] lg:text-[24px] animate-fade-in-right-1 animation-delay-200">
+                    Each milestone achieved reflects our unwavering dedication to progress, collaboration, and excellence. 
+                </p>
+                <p class="text-white custom-font-poppins-regular leading-relaxed text-xs sm:text-[14px] lg:text-[24px] mt-4 animate-fade-in-right-1 animation-delay-200">
+                    As we look toward the future, Delta Vox remains committed to inspiring the next generation of engineers and innovators in creating a more sustainable world.
                 </p>
             </div>
         </div>

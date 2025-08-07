@@ -37,7 +37,7 @@
             <div class="text-center md:text-left">
             </div>            
 
-            <div class="text-center md:text-left lg:ml-2">
+            <div class="text-center md:text-left md:ml-4 lg:ml-2">
                 <h4 class="font-bold mb-2 "> Service</h4>
                 <ul class="space-y-1">
                     <li><a href="#" class="hover:underline"> Send Us a Letter</a></li>
@@ -48,7 +48,7 @@
             <div class="text-center md:text-left">
             </div>
 
-            <div class="flex flex-col items-center space-y-2">
+            <div class="flex flex-col items-center space-y-2 md:ml-28 lg:-ml-4">
                 <img src="/images/Logo Putih.png" alt="Logo" class="w-16 h-16" />
                 <div class="flex items-center space-x-1 text-sm">
                     <img src="/images/Logo Location.png" alt="Location"/>
