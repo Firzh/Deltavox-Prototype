@@ -8,7 +8,7 @@
 @source '../**/*.blade.php';
 @source '../**/*.js';
 
-@import './navbar.css';
+/* @import './navbar.css'; */
 
 
 @font-face {
