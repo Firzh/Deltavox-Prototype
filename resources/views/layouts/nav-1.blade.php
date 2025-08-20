@@ -15,7 +15,7 @@
                 </a>
             </div>
 
-            <div class="flex-shrink-0 absolute left-1/2 transform -translate-x-1/2">
+            <div class="flex-shrink-0 absolute left-1/2 transform -translate-x-5">
                 <a href="{{ route('home') }}" class="flex items-center">
                     <img src="{{ asset('images/Logo Merah.png') }}" alt="Deltavox Logo" class="w-16 h-16 rounded-full">
                     {{-- <span class="ml-3 text-xl font-bold text-gray-900">Deltavox</span> --}}

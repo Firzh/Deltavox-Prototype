@@ -9,7 +9,7 @@
 
         {{-- Konten Teks --}}
         <div class=" mb-20 -mt-10 md:-mt-10 md:mb-20 lg:mt-30 lg:mb-10 xl:mt-0 xl:mb-10 animate-fade-in animation-delay-200 order-1">
-            <h1 class="text-[#FDDA7C] custom-font-bebas-neue-light font-bold text-center leading-none uppercase text-3xl md:text-6xl lg:text-[132.42px]">
+            <h1 class="text-[#FDDA7C] custom-font-bebas-neue-regular-1 font-bold text-center leading-none uppercase text-3xl md:text-6xl lg:text-[132.42px]">
                 ABOUT DELTA VOX
             </h1>
             <p class="text-white custom-font-poppins-regular text-center leading-relaxed text-[12px] md:text-[18px] lg:text-[24px] mt-2">
@@ -62,7 +62,7 @@
     <div class="max-w-7xl mx-auto px-4">
         {{-- Konten Teks diatur dalam grid satu kolom --}}
         <div class="grid grid-cols-1 gap-4 text-left ml-8 mb-40 mr-8 md:ml-12 lg:ml-8 xl:ml-0">
-            <h1 class="text-[#FDDA7C] custom-font-bebas-neue-light font-bold leading-none uppercase text-2xl md:text-3xl lg:text-[44.66px] animate-fade-in-up-1 animation-delay-200">
+            <h1 class="text-[#FDDA7C] custom-font-bebas-neue-regular-1 font-bold leading-none uppercase text-2xl md:text-3xl lg:text-[44.66px] animate-fade-in-up-1 animation-delay-200">
                 DELTA VOX HISTORY
             </h1>
             <p class="text-white custom-font-poppins-regular leading-relaxed text-xs sm:text-[14px] lg:text-[24px] animate-fade-in-up-1 animation-delay-200">

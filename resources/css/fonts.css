@@ -8,29 +8,115 @@
     font-family: 'Inter', sans-serif; /* Mengasumsikan 'Sans Serif Collection' adalah Inter atau font sans-serif default */
 }
 
+/* Fonts Bebas Neue */
+/* ======================================================================== */
 .custom-font-bebas-neue {
     font-family: 'Bebas Neue', sans-serif;
-    font-weight: 700;
+    font-weight: 400; /* regular */
 }
 
+/* .custom-font-bebas-neue-thin {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 100; 
+}
+
+.custom-font-bebas-neue-extralight {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 200; 
+}
+
+.custom-font-bebas-neue-light {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 300; 
+} */
+
+.custom-font-bebas-neue-regular {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400; /* regular */
+}
+
+/* .custom-font-bebas-neue-medium {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 500; 
+}
+
+.custom-font-bebas-neue-semibold {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 600; 
+} */
+
+.custom-font-bebas-neue-bold {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 700; /* Bold */
+}
+
+/* .custom-font-bebas-neue-extrabold {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 800; 
+}
+
+.custom-font-bebas-neue-black {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 900; 
+} */
+
+/* Variants */
 .custom-font-bebas-neue-1 {
     font-family: 'Bebas Neue', sans-serif;
     font-weight: 700;
     letter-spacing: 0.025em;
 }
 
-.custom-font-bebas-neue-light {
+.custom-font-bebas-neue-regular-1 {
     font-family: 'Bebas Neue', sans-serif;
     font-weight: 400;
     letter-spacing: 0.025em;
 }
+
+/* Fonts Poppins */
+/* ======================================================================== */
+/* .custom-font-poppins-thin {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100; 
+}
+
+.custom-font-poppins-extralight {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200; 
+}
+
+.custom-font-poppins-light {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300; 
+} */
+
+.custom-font-poppins-regular {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400; /* regular */
+}
+
+/* .custom-font-poppins-medium {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500; 
+}
+
+.custom-font-poppins-semibold {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600; 
+} */
 
 .custom-font-poppins-bold {
     font-family: 'Poppins', sans-serif;
     font-weight: 700; /* Bold */
 }
 
-.custom-font-poppins-regular {
+/* .custom-font-poppins-extrabold {
     font-family: 'Poppins', sans-serif;
-    font-weight: 400; /* Regular */
+    font-weight: 800; 
 }
+
+.custom-font-poppins-black {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900; 
+} */
+

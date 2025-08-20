@@ -1,0 +1,7 @@
+.warp-y {
+  /* Menggunakan scaleY untuk menarik teks pada sumbu Y. 
+     Angka 2 akan membuatnya dua kali lebih tinggi. */
+  transform: scaleY(1.5); 
+  /* Memberikan efek yang lebih halus */
+  transform-origin: center; 
+}

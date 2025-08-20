@@ -1,6 +1,6 @@
 {{-- resources/views/nav-1.blade.php --}}
 
-<nav id="{{ $id ?? 'navbar-dark' }}" class="bg-[#1C1C1C] fixed w-full z-50 top-0"> {{-- Warna background diubah menjadi hitam gelap, shadow dihapus --}}
+<nav id="{{ $id ?? 'navbar-dark' }}" class="bg-[#120E0E] fixed w-full z-50 top-0"> {{-- Warna background diubah menjadi hitam gelap, shadow dihapus --}}
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-20 items-center">
             <div class="hidden md:flex items-center space-x-20"> {{-- space-x-20 untuk jarak antar item --}}
@@ -15,7 +15,7 @@
                 </a>
             </div>
 
-            <div class="flex-shrink-0 absolute left-1/2 transform -translate-x-1/2">
+            <div class="flex-shrink-0 absolute left-1/2 transform -translate-x-5">
                 <a href="{{ route('home') }}" class="flex flex-col items-center"> {{-- Menggunakan flex-col untuk logo dan teks --}}
                     <img src="{{ asset('images/Logo Putih.png') }}" alt="Deltavox Logo" class="w-16 h-16 mb-1"> {{-- Ukuran disesuaikan, logo putih --}}
                     {{-- <span class="text-white text-xs font-bold tracking-widest leading-none">DELTA VOX</span> --}}

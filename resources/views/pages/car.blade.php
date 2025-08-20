@@ -15,7 +15,7 @@
         <div class="text-white text-left ml-2 md:-mt-10 md:ml-6 xl:ml-10 animate-fade-in-up animation-delay-200 order-2">
             {{-- Judul Kalimasada --}}
             <div class="mb-4">
-                <h1 class="custom-font-bebas-neue font-normal leading-none uppercase text-xl md:text-2xl lg:text-3xl">
+                <h1 class="custom-font-bebas-neue-bold font-normal leading-none uppercase text-xl md:text-2xl lg:text-3xl">
                     KALIMASADA
                 </h1>
             </div>
@@ -38,7 +38,7 @@
             
             {{-- Deskripsi --}}
             <div class="col-span-full max-w-6xl animate-fade-in-up-1 animation-delay-200 hidden-on-load">
-                <p class="text-white custom-font-bebas-neue ml-6 leading-relaxed text-xl md:text-3xl lg:text-5xl">
+                <p class="text-white custom-font-bebas-neue-bold ml-6 leading-relaxed text-xl md:text-3xl lg:text-5xl">
                     Photos
                 </p>
             </div>
